@@ -3,7 +3,11 @@ package org.example;
 import javax.swing.*;
 import java.awt.*;
 
+
 public class MainScreen {
+
+    public static String currentAccount = "guest";
+
     JFrame frame = new JFrame("Nutrifit: Eat, Run, Smile!");
     JPanel mainPanel = new JPanel(new CardLayout());
     HomeScreen homeScreen = new HomeScreen();

@@ -5,8 +5,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static org.example.MainScreen.currentAccount;
+
 public class HomeScreen extends JPanel {
-    JButton button1 = new JButton("Create Account");
+    JButton button1 = new JButton("Manage Accounts");
     JButton button2 = new JButton("Log Diet Data");
     JButton button3 = new JButton("Log Exercise Data");
     JButton button4 = new JButton("Visualize Calorie Intake");
@@ -15,9 +17,12 @@ public class HomeScreen extends JPanel {
     JButton button7 = new JButton("Compare Diet");
 
     JLabel title = new JLabel("Welcome to Nutrifit!");
-    JLabel heading1 = new JLabel("current account: guest");
+    JLabel heading1 = new JLabel("current account: "+ currentAccount);
     JLabel heading2 = new JLabel("info box 2");
 
+    public void updateCurrentAccount() {
+        heading1.setText("Current account: " + currentAccount);
+    }
 
     public HomeScreen(){
         this.setLayout(new GridLayout(4, 1)); // 4 rows, 1 column
@@ -26,6 +31,8 @@ public class HomeScreen extends JPanel {
         JPanel titlePanel = new JPanel();
         titlePanel.add(title);
         this.add(titlePanel);
+
+
 
         // Create heading panels
         JPanel headingPanel1 = new JPanel();
