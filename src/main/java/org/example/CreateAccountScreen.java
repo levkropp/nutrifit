@@ -37,26 +37,6 @@ public class CreateAccountScreen extends JPanel {
 
 
     public CreateAccountScreen() {
-//        this.add(nameLabel);
-//        this.add(nameField);
-//
-//        this.add(heightLabel);
-//        this.add(heightField);
-//
-//        this.add(weightLabel);
-//        this.add(weightField);
-//
-//        this.add(ageLabel);
-//        this.add(ageField);
-//
-//        this.add(sexLabel);
-//        sexButtonGroup.add(maleButton);
-//        sexButtonGroup.add(femaleButton);
-//        this.add(maleButton);
-//        this.add(femaleButton);
-//        maleButton.setSelected(true);
-//
-//        this.add(saveButton);
 
         this.setLayout(new BorderLayout()); // Set the overall layout to BorderLayout
 
@@ -185,14 +165,6 @@ public class CreateAccountScreen extends JPanel {
                 JOptionPane.showMessageDialog(null, "Error saving account: " + sqlException.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             }
         });
-
-//        this.add(selectedAccountLabel);
-//        this.add(accountDropdown);
-//        this.add(selectedAccountNameLabel);
-//        this.add(selectedAccountHeightLabel);
-//        this.add(selectedAccountWeightLabel);
-//        this.add(selectedAccountAgeLabel);
-//        this.add(selectedAccountSexLabel);
 
         try (Connection connection = DriverManager.getConnection("jdbc:sqlite:nutrifit.db")) {
             String sql = "INSERT OR IGNORE INTO accounts (name, height, weight, age) VALUES ('guest', 200, 100, 20)";
