@@ -21,6 +21,13 @@
             <artifactId>sqlite-jdbc</artifactId>
             <version>3.43.2.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.jfree</groupId>
+            <artifactId>jfreechart</artifactId>
+            <version>1.5.4</version>
+        </dependency>
+
         <!-- Include other dependencies here -->
     </dependencies>
 
